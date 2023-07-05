@@ -1,0 +1,28 @@
+--Create a store database with 15 items
+
+
+CREATE TABLE fruit_store (id INTEGER PRIMARY KEY, name TEXT, stocked INTEGER, price INTEGER, color TEXT);
+
+INSERT INTO fruit_store VALUES (1, "bananas" , 10, 0.15, "yellow");
+INSERT INTO fruit_store VALUES (2, "strawberries" , 6, 2.00, "red");
+INSERT INTO fruit_store VALUES (3, "grapes" , 8, 2.50, "green");
+INSERT INTO fruit_store VALUES (4, "apples" , 15, 0.20, "red");
+INSERT INTO fruit_store VALUES (5, "watermelons" , 5, 3.00, "green");
+INSERT INTO fruit_store VALUES (6, "oranges" , 10, 0.10, "orange");
+INSERT INTO fruit_store VALUES (7, "blueberries" , 12, 1.50, "blue");
+INSERT INTO fruit_store VALUES (8, "lemons" , 15, 0.15, "yellow");
+INSERT INTO fruit_store VALUES (9, "peaches" , 18, 0.30, "orange");
+INSERT INTO fruit_store VALUES (10, "pineapples" , 8, 2.15, "yellow");
+INSERT INTO fruit_store VALUES (11, "cherries" , 5, 1.15, "red");
+INSERT INTO fruit_store VALUES (12, "plums" , 15, 0.15, "purple");
+INSERT INTO fruit_store VALUES (13, "pears" , 13, 0.25, "green");
+INSERT INTO fruit_store VALUES (14, "limes" , 11, 0.15, "green");
+INSERT INTO fruit_store VALUES (15, "mangoes" , 7, 0.15, "orange");
+
+
+-- display the database ordered by price
+SELECT * FROM fruit_store ORDER BY price;
+
+
+-- display the maximum amount of one type of product that is stocked
+SELECT MAX(stocked) FROM fruit_store;
